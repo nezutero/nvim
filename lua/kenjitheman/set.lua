@@ -14,8 +14,8 @@ vim.opt.expandtab = true
 -- Enable smart indent
 vim.opt.smartindent = true
 
--- Disable text wrapping
-vim.opt.wrap = false
+-- Disable/enable text wrapping
+vim.opt.wrap = true
 
 -- Disable swap, backup, and enable undo
 vim.opt.swapfile = false
@@ -41,4 +41,4 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 -- Highlight a column at position 80
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "0"
