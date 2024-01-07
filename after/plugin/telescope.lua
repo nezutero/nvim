@@ -4,22 +4,25 @@ local telescope = require('telescope')
 telescope.setup({ -- remove file preview
     defaults = {
         file_sorter = require('telescope.sorters').get_fzy_sorter,
-        prompt_prefix = '  ',
-        color_devicons = true,
-        file_previewer = nil,
-        grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
-        qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
-        preview_title = false,
+        prompt_prefix = ' > ',
+        file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+        layout_config = {
+            horizontal = {
+                width = 0.8,
+                height = 0.8,
+                preview_width = 0,
+            },
+        },
     },
 })
 
 -- Set custom colors with transparency
 vim.cmd([[
-hi TelescopeBorder      guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
-hi TelescopePrompt      guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
-hi TelescopeResults     guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
+hi TelescopeBorder guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
+hi TelescopePrompt guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
+hi TelescopeResults guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
 hi TelescopePreviewBorder guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
-hi TelescopeSelection   guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
+hi TelescopeSelection guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
 hi TelescopeSelectionCaret guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
 
 " Set transparency for Telescope
