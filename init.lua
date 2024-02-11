@@ -1,1 +1,1 @@
-require("btwkenji")
+require("kenjitheman")
