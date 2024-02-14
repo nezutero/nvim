@@ -3,7 +3,7 @@ vim.opt.guicursor = ""
 
 -- Enable line numbers and relative line numbers
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 -- Set tab-related options
 vim.opt.tabstop = 4
