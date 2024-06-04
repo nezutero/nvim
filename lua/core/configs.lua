@@ -1,5 +1,5 @@
 -- Disable the cursor line/column indicator in GUI mode
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
 
 -- Enable line numbers and relative line numbers
 vim.opt.number = true
@@ -32,7 +32,6 @@ vim.opt.termguicolors = true
 
 -- Set scrolloff and signcolumn
 vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
 
 -- Allow "@" in file names for various operations
 vim.opt.isfname:append("@-@")

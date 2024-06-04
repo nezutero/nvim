@@ -1,1 +1,12 @@
-require("kenjitheman")
+require("core.mappings")
+require("core.colors")
+require("core.configs")
+require("core.plugins")
+
+require("plugins.cmp")
+require("plugins.lsp")
+require("plugins.telescope")
+require("plugins.lualine")
+require("plugins.harpoon")
+require("plugins.treesitter")
+require("plugins.undotree")
