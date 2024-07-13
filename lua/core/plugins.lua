@@ -13,7 +13,12 @@ require("lazy").setup({
         "nvim-telescope/telescope.nvim",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
-    { "folke/tokyonight.nvim" },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
     {
         "nvim-treesitter/nvim-treesitter"
         -- build = ":TSUpdate",
@@ -91,11 +96,11 @@ require("lazy").setup({
     },
     { "nvim-tree/nvim-web-devicons" },
     { "hrsh7th/cmp-nvim-lsp-signature-help" }, {
-        "linrongbin16/lsp-progress.nvim",
-        event = { "VimEnter" },
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function() require("lsp-progress").setup() end
-    },
+    "linrongbin16/lsp-progress.nvim",
+    event = { "VimEnter" },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function() require("lsp-progress").setup() end
+},
     { "mbbill/undotree" },
     {
         "folke/flash.nvim",

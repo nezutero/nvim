@@ -1,7 +1,7 @@
 require("core.mappings")
-require("core.colors")
 require("core.configs")
 require("core.plugins")
+require("core.colors")
 
 require("plugins.cmp")
 require("plugins.lsp")
