@@ -51,4 +51,4 @@ require("mason-lspconfig").setup {
 -- Set up lspconfig.
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- local lspconfig = require("lspconfig").diagnostics { globals = { "vim" } }
-require("lspconfig")["tsserver"].setup { capabilities = capabilities }
+require("lspconfig")["ts_ls"].setup { capabilities = capabilities }
