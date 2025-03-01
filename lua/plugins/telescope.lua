@@ -8,9 +8,9 @@ telescope.setup({ -- remove file preview
         file_previewer = require("telescope.previewers").vim_buffer_cat.new,
         layout_config = {
             horizontal = {
-                width = 0.5,
-                height = 0.6,
-                preview_width = 0,
+                width = 0.8, -- 0.5
+                height = 0.8, -- 0.6
+                preview_width = 0.7, -- 0
             },
         },
     },
@@ -45,4 +45,5 @@ vim.cmd("hi! link TelescopeMultiSelection TelescopeNormal")
 
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set("n", "<C-p>", builtin.git_files, {})
