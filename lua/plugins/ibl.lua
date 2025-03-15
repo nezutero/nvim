@@ -7,7 +7,7 @@ require("ibl").setup {
         -- -- "│" - U+2502 may also be a good choice, it will be on the middle of cursor.
         -- -- "┊" - U+250A - is also a good choice
         -- curr = "▏",
-        char = "│",
+        char = "▏",
     },
     scope = {
         show_start = false,
