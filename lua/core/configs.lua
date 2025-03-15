@@ -48,3 +48,10 @@ vim.opt.updatetime = 50
 
 -- Highlight a column at position 80
 vim.opt.colorcolumn = "0"
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "text", "markdown" },
+    callback = function()
+        vim.opt_local.linebreak = true
+    end,
+})
