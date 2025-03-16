@@ -87,6 +87,7 @@ require("lazy").setup({
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
+    { "mbbill/undotree" },
     {
         "nvim-lualine/lualine.nvim",
         dependencies = {
@@ -96,21 +97,17 @@ require("lazy").setup({
     },
     { "nvim-tree/nvim-web-devicons" },
     { "hrsh7th/cmp-nvim-lsp-signature-help" }, {
-    "linrongbin16/lsp-progress.nvim",
-    event = { "VimEnter" },
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    {
-        "lukas-reineke/indent-blankline.nvim",
-        main = "ibl",
-        ---@module "ibl"
-        ---@type ibl.config
-        opts = {},
+        "linrongbin16/lsp-progress.nvim",
+        event = { "VimEnter" },
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        {
+            "lukas-reineke/indent-blankline.nvim",
+            main = "ibl",
+            ---@module "ibl"
+            ---@type ibl.config
+            opts = {},
+        },
+        config = function() require("lsp-progress").setup() end
     },
-    config = function() require("lsp-progress").setup() end
-},
-    {
-        "ellisonleao/glow.nvim",
-        config = true,
-        cmd = "Glow"
-    },
-});
+    { "ellisonleao/glow.nvim", config = true, cmd = "Glow" }
+})
