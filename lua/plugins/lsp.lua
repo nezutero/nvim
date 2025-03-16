@@ -5,7 +5,7 @@ require("fidget").setup({})
 require("mason-lspconfig").setup {
     ensure_installed = {
         -- "astro",
-        -- "bashls",
+        "bashls",
         "clangd",
         -- "dockerls",
         "eslint",
@@ -15,7 +15,7 @@ require("mason-lspconfig").setup {
         -- "htmx",
         -- "hls",
         -- "jsonls",
-        -- "tsserver",
+        "ts_ls",
         "marksman",
         -- "nil_ls",
         -- "ocamllsp",
@@ -24,7 +24,7 @@ require("mason-lspconfig").setup {
         "rust_analyzer",
         "lua_ls",
         "zls",
-        -- "cssls",
+        "cssls",
         "marksman",
         -- "yamlls",
     },
@@ -51,4 +51,4 @@ require("mason-lspconfig").setup {
 -- Set up lspconfig.
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- local lspconfig = require("lspconfig").diagnostics { globals = { "vim" } }
-require("lspconfig")["ts_server"].setup { capabilities = capabilities }
+require("lspconfig")["ts_ls"].setup { capabilities = capabilities }
