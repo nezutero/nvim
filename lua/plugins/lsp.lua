@@ -16,6 +16,7 @@ require("mason-lspconfig").setup {
         "lua_ls",
         "zls",
         "cssls",
+        "nil_ls",
     },
     handlers = {
         function(server_name)
