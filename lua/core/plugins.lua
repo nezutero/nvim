@@ -104,7 +104,7 @@ require("lazy").setup({
     config = function() require("lsp-progress").setup() end
 },
     {
-        "norcalli/nvim-colorizer.lua",
+        "catgoose/nvim-colorizer.lua",
         config = function() require("colorizer").setup() end
 
     },
