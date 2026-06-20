@@ -75,3 +75,8 @@ vim.api.nvim_create_autocmd("FileType", {
         -- vim.opt.conceallevel = 2
     end,
 })
+
+vim.opt.textwidth = 100
+vim.opt.colorcolumn = "90"
+vim.opt.breakindent = true
+vim.opt.linebreak = true
