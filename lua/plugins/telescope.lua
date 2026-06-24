@@ -21,45 +21,38 @@ return {
                     "--column",
                     "--smart-case",
 
-                    "--glob=!**/.git/*",
-                    "--glob=!**/.idea/*",
-                    "--glob=!**/.vscode/*",
-                    "--glob=!**/build/*",
-                    "--glob=!**/dist/*",
-                    "--glob=!**/yarn.lock",
-                    "--glob=!**/package-lock.json",
+                    "--glob=!**/.git/**",
+                    "--glob=!**/.idea/**",
+                    "--glob=!**/.vscode/**",
+                    "--glob=!**/build/**",
+                    "--glob=!**/dist/**",
+                },
+
+                prompt_prefix = " > ",
+                file_sorter = require("telescope.sorters").get_fzy_sorter,
+                file_previewer = require("telescope.previewers").vim_buffer_cat.new,
+
+                layout_strategy = "horizontal",
+                layout_config = {
+                    width = 0.6,
+                    height = 0.8,
                 },
             },
 
             pickers = {
                 find_files = {
                     hidden = true,
+                    previewer = true,
                     find_command = {
                         "rg",
                         "--files",
                         "--hidden",
-                        "--glob=!**/.git/*",
-                        "--glob=!**/.idea/*",
-                        "--glob=!**/.vscode/*",
-                        "--glob=!**/build/*",
-                        "--glob=!**/dist/*",
-                        "--glob=!**/yarn.lock",
-                        "--glob=!**/package-lock.json",
+                        "--glob=!**/.git/**",
+                        "--glob=!**/.idea/**",
+                        "--glob=!**/.vscode/**",
+                        "--glob=!**/build/**",
+                        "--glob=!**/dist/**",
                     },
-                },
-            },
-
-            file_sorter = require("telescope.sorters").get_fzy_sorter,
-
-            prompt_prefix = " > ",
-
-            file_previewer = require("telescope.previewers").vim_buffer_cat.new,
-
-            layout_config = {
-                horizontal = {
-                    width = 0.8,
-                    height = 0.8,
-                    preview_width = 0.7,
                 },
             },
         })
