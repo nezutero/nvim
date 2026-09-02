@@ -1,1 +1,1 @@
-Moved to my [dotfiles](https://codeberg.org/nezutero/dotfiles/src/branch/main/nvim)
+Moved to my [dotfiles](https://github.com/nezutero/dotfiles/tree/main/modules/home/nvim/config)
